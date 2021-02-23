@@ -1,47 +1,92 @@
 html {
   font-size: 100%;
-  font-family: Arial, Helvetica, sans-serif;
-}
-* {
+  line-height: 1.5rem;
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
 }
 
 body {
-  margin: 0;
-
-  display: flex;
-  flex-direction: column;
+  margin: 0 auto;
+  padding: 0;
+  min-height: flex;
   background-color: #bda7a7d5;
 }
 
-.header {
-  background-color: #1d2952;
-  padding: 20px;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
-.header a {
-  float: left;
-  color: rgba(231, 231, 231, 0.849);
+.img {
+  width: 100%;
+  height: flex;
+  display: block;
+}
+
+.nav-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  line-height: 2rem;
+  overflow: hidden;
+  background-color: black;
+  z-index: 10;
+}
+
+.logo,
+.nav-menu {
+  text-transform: uppercase;
+}
+
+.logo,
+.nav-item {
+  white-space: nowrap;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  z-index: 10;
+}
+
+.nav-item {
+  flex: 1 0 33.3%;
   text-align: center;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 18px;
-  line-height: 25px;
-  border-radius: 4px;
 }
 
-.header a.logo {
-  font-size: 25px;
-  font-weight: bold;
+.social-nav-item {
+  flex: 1 1 10%;
 }
 
+.logo a {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.nav-menu a {
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  border-bottom: 1px solid white;
+  transition: all ease 0.1s;
+}
+
+/*Mason no touch after here*/
 .header a:hover {
   background-color: rgb(233, 233, 233);
-  color: black;
+  color: rgb(168, 133, 133);
 }
 
 .header-right {
   float: right;
+  justify-content: space-between;
 }
 
 .row {
@@ -51,19 +96,8 @@ body {
   padding: 2px 10px;
 }
 
-.column {
-  flex: 50%;
-  max-width: 100%;
-  padding: 20px 10px;
-}
-
 .column img {
   padding-bottom: 20px;
-}
-
-.content {
-  padding: 20px;
-  text-align: right;
 }
 
 .content a:hover {
@@ -73,19 +107,17 @@ body {
   padding: 2px 10px;
 }
 
-.content a {
-  text-decoration: none;
-}
-
+/*image*/
 img {
   width: 100%;
-  height: 100%;
-  align-self: center;
+  height: flex;
+  align-self: left;
+  padding-top: 8rem;
 }
-
+/*actual footer*/
 .footer {
   flex-shrink: 0;
-  background-color: #1d2952c0;
+  background-color: #1d2952;
   text-align: center;
   padding: 20px;
 }
